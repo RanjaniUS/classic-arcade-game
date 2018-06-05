@@ -16,7 +16,7 @@ Enemy.prototype.update = function(dt) {
     //Resetting the position when enemy goes off the canvas
     if(this.x > 505){
        this.x = -100;
-       this.speed = 100 + Math.floor(Math.random() * 256);
+       this.speed = 100 + Math.floor(Math.random() * 300);
     }
     //Collision between player and enemies
     if (player.x < this.x + 60 &&
@@ -24,7 +24,7 @@ Enemy.prototype.update = function(dt) {
        player.y < this.y + 25 &&
        30 + player.y > this.y) {
        player.x = 200;
-       player.y = 380;
+       player.y = 400;
    }
 };
 
